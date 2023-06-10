@@ -13,7 +13,31 @@
     <header></header>
     <nav></nav>
     <section>
-        <div id="miApp2"></div>
+        <div id="miApp2">
+            <h4>Estudiantes UCE</h4>
+            <input type="text" v-model="nombre" v-on:keypress.enter="agregarEstudiante2">
+            <h1>{{nombre}}</h1>
+            <hr>
+            <h1>Lista Estudiantes</h1>
+            <!--<ul>
+                <li>{{miArreglo[0].nombre + " " + miArreglo[0].apellido}}</li>
+                <li>{{miArreglo[1].nombre}}</li>
+                <li>{{miArreglo[2].nombre}}</li>
+                <li>{{miArreglo[3].nombre}}</li>
+                <li>{{miArreglo[4].nombre}}</li>
+                <li>{{miArreglo[5].nombre}}</li>
+                <li>{{miArreglo[6].nombre}}</li>
+                <li>{{miArreglo[7].nombre}}</li>
+                <li>{{miArreglo[8].nombre}}</li>
+                <li>{{miArreglo[9].nombre}}</li> 
+            </ul>-->
+            <ul>
+                <li v-for="({nombre, apellido}, index) in miArreglo">
+                    <span>{{index+1}}.- {{nombre}}</span>
+                    <blockquote>{{apellido}}</blockquote>
+                </li>
+            </ul>
+        </div>
     </section>
     <footer></footer>
     <script src="../js/vFor.js"></script>
