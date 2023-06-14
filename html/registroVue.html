@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso Libros</title>
+    <link rel="stylesheet" href="../css/registroVue.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Registro de libros</h1>
+    </header>
+    <nav></nav>
+    <section>
+        <div id="miApp3">
+            <div class="container">
+                <div class="ingLibros">
+                    <h3>Ingrese un nuevo libro</h4>
+                    <label for="idTitulo">Titulo:</label>
+                    <input id="idTitulo" type="text" v-model="titulo">
+                    <label for="idAutor">Autor:</label>
+                    <input id="idAutor" type="text" v-model="autor">
+                    <label for="idAnio">Año de publicación:</label>
+                    <input id="idAnio" type="number" placeholder="YYYY" min="1455" max="2023" step="1" v-model="anio">
+                    <label for="idNum">Número de páginas:</label>
+                    <input id="idNum" type="number" v-model="numPaginas" max="3050">
+                    <button v-on:click="ingresarLibro">Ingresar</button>
+                </div>
+                <hr>
+                <h1>Lista de Libros</h1>
+                <div class="lista">
+                    <ol>
+                        <li v-for="({titulo, autor, anio, numPaginas}, index) in arreglo">
+                            <span>Título: {{titulo}}, Autor: {{autor}}, Año de publicación: {{anio}}, Número de páginas: {{numPaginas}}</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="../js/registroVue.js"></script>
+</body>
+
+</html>

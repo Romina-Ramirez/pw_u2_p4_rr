@@ -1,0 +1,88 @@
+* {
+    font-family:'Times New Roman', Times, serif ;
+}
+
+h1 {
+    text-align: center;
+    color: #48041e;
+}
+
+body {
+    background-color: #DA627D;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingLibros {
+    display: grid;
+    column-span: 1;
+    width: 450px;
+    height: 375px;
+    background: #FFA5AB;
+    border-radius: 20px;
+    padding: 20px 20px;
+    box-shadow: 10px 10px 20px 0px #A53860;
+    color: #450920;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 20px 0px;
+    padding-bottom: 3px;
+    width: 200px;
+    color: #751739;
+    border-bottom: 3px solid #751739;
+}
+
+input {
+    border: 0;
+    border-bottom: 1.75px solid #A53860;
+    background: #f6c9cc;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    box-shadow: 5px 5px 20px 0px #d14b7c;
+}
+
+::placeholder {
+    color: #c18a53;
+}
+
+input:focus {
+    border-bottom: 3px solid #ffffff;
+    outline: none;
+}
+
+button {
+    background-color: #F9DBBD;
+    border-radius: 15px;
+    border: 2px solid #be650b;
+    padding: 5px;
+    color: #824101;
+    font-weight: bold;
+    margin-inline: 100px;
+}
+
+button:hover {
+    background-color: #cb7117;
+    color: #623100;
+    border: 2px solid #824101;
+}
+
+hr {
+    border: none; 
+}
+
+.lista {
+    background-color: #F9DBBD;
+    width: 99vw;
+    height: fit-content;
+    padding: 5px;
+    color: black;
+}
