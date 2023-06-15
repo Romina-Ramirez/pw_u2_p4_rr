@@ -19,22 +19,11 @@
             <h1>{{nombre}}</h1>
             <hr>
             <h1>Lista Estudiantes</h1>
-            <!--<ul>
-                <li>{{miArreglo[0].nombre + " " + miArreglo[0].apellido}}</li>
-                <li>{{miArreglo[1].nombre}}</li>
-                <li>{{miArreglo[2].nombre}}</li>
-                <li>{{miArreglo[3].nombre}}</li>
-                <li>{{miArreglo[4].nombre}}</li>
-                <li>{{miArreglo[5].nombre}}</li>
-                <li>{{miArreglo[6].nombre}}</li>
-                <li>{{miArreglo[7].nombre}}</li>
-                <li>{{miArreglo[8].nombre}}</li>
-                <li>{{miArreglo[9].nombre}}</li> 
-            </ul>-->
             <ul>
                 <li v-for="({nombre, apellido}, index) in miArreglo">
                     <span>{{index+1}}.- {{nombre}}</span>
-                    <blockquote>{{apellido}}</blockquote>
+                    <blockquote v-if="apellido!=undefined">Apellido1: {{apellido}}</blockquote>
+                    <!-- <blockquote v-show="apellido!=undefined">Apellido2: {{apellido}}</blockquote> -->
                 </li>
             </ul>
         </div>
